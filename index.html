@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Firebase</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="app">
+        <button id="button-login">Login con Google</button>
+        <button id="button-logout" class="hidden">Cerrar Sesión</button>
+
+        <form id="todo-form">
+            <div id="user-info"></div>
+            <input 
+                type="text" 
+                id="todo-input" 
+                placeholder="Nuevo todo..." 
+                autocomplete="off"
+            />
+        </form>
+        <div id="todos-container"></div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+        
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyD3343HVIREYSOqh2dLP_sXnLz9Q7NZ9UE",
+          authDomain: "proyectazo-20062.firebaseapp.com",
+          projectId: "proyectazo-20062",
+          storageBucket: "proyectazo-20062.appspot.com",
+          messagingSenderId: "267035788375",
+          appId: "1:267035788375:web:4adce64c2b2a2476f6cf12",
+          measurementId: "G-8VVMKHLHJF"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+    <script src="/java/app.js" type="module"></script>
+</body>
+</html>
